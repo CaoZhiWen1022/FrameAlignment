@@ -1,0 +1,39 @@
+# ========================== Unity 核心忽略项 ==========================
+# Unity 生成的库目录（包含缓存、编译后的资源，本地生成即可）
+/Library/
+
+# Unity 临时文件目录（编译、运行时的临时文件）
+/Temp/
+
+# Unity 导出的包文件（按需保留，默认忽略）
+/Packages/
+!Packages/manifest.json
+!Packages/packages-lock.json
+
+# Unity 构建输出目录（打包后的产物，无需版本控制）
+/Build/
+/Builds/
+/obj/
+
+# Unity 日志文件
+*.log
+
+# Unity 崩溃报告
+/crashlytics/
+/CrashReportAPI/
+
+# Unity 性能分析数据
+/PerformanceReport/
+
+# Unity Addressables 本地缓存
+/AddressableAssetsData/LocalBuilds/
+
+/.vs/
+
+#工程
+Assets/FairyGUI
+Assets/FairyGUI.meta
+Assets/Resources/FGUI
+Assets/Resources/FGUI.meta
+Assets/FGUIExport
+Assets/FGUIExport.meta
