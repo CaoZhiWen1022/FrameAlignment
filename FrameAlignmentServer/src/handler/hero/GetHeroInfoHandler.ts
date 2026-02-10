@@ -3,7 +3,8 @@ import { proto } from "../../generated";
 import { db } from "../../database/Database";
 
 export function handleGetHeroInfo(client: ClientObj, _ctx: Uint8Array): Uint8Array {
-    const useHeroId = db.getUseHeroId(client.userId!);
+    let useHeroId = db.getUseHeroId(client.userId!);
+    if (!useHeroId) useHeroId = 1001;
 
     const response: proto.IGetHeroInfoResponse = {
         base: {

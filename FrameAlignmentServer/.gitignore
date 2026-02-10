@@ -6,6 +6,7 @@ yarn.lock
 # 构建输出
 dist/
 build/
+data/
 
 # 生成的proto文件
 src/generated/
