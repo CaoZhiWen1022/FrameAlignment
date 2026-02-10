@@ -58,22 +58,27 @@
 1. **克隆仓库**
 
    ```bash
-   git clone https://github.com/你的账号/FrameAlignment.git
+   git clone https://github.com/CaoZhiWen1022/FrameAlignment.git
    ```
 
 2. **服务端**
 
    - 进入 `FrameAlignmentServer` 目录  
-   - 安装依赖并启动（根据你实际的脚本命令调整）  
+   - 安装依赖并启动
 
    ```bash
    npm install
+   npm run proto
    npm run start
    ```
 
-3. **客户端**
+3. **UI**
+    - 使用fgui编辑器导出所有UI到Unity工程
 
-   - 使用对应版本的 Unity 打开 `FrameAlignmentClient` 工程  
+
+4. **客户端**
+
+   - 使用Tuanjie 1.8.0 打开 `FrameAlignmentClient` 工程  
    - 在 Editor 中运行，或打包到目标平台  
    - 确保客户端配置的服务器地址与端口与服务端一致  
 
@@ -83,15 +88,8 @@
 - 想要了解 Unity + Node.js **端到端联调**流程的同学  
 - 希望基于现成框架快速搭建自己多人游戏原型的独立开发者 / 学生  
 
-### TODO / 规划
-
-- [ ] 完善示例关卡与玩法逻辑  
-- [ ] 补充更多帧同步相关注释与文档  
-- [ ] 增加压力测试与性能统计示例  
-- [ ] 提供一键启动脚本（服务端 + 客户端 Demo）  
-
 ### 许可证
 
-本项目默认采用 **MIT License** 开源（如需更改请在仓库中添加或修改 `LICENSE` 文件）。  
+本项目默认采用 **MIT License** 开源。  
 
 
