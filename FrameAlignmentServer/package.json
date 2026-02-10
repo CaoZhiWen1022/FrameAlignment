@@ -1,0 +1,42 @@
+{
+  "name": "frame-alignment-server",
+  "version": "1.0.0",
+  "description": "TypeScript游戏服务器框架",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "watch": "tsc --watch",
+    "proto:generate": "node scripts/generate-proto.js",
+    "proto:watch": "node scripts/generate-proto.js --watch",
+    "proto:csharp": "node scripts/generate-proto-csharp.js",
+    "proto": "node scripts/generate-proto.js && node scripts/generate-proto-csharp.js"
+  },
+  "keywords": [
+    "game-server",
+    "typescript",
+    "websocket"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "lowdb": "^5.1.0",
+    "protobufjs": "^7.2.5",
+    "sql.js": "^1.13.0",
+    "ws": "^8.14.2"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^3.0.0",
+    "@types/node": "^20.10.0",
+    "@types/sql.js": "^1.4.9",
+    "@types/ws": "^8.5.10",
+    "grpc-tools": "^1.12.4",
+    "pb-to-ts": "^1.0.0",
+    "protobufjs-cli": "^2.0.0",
+    "ts-morph": "^27.0.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.3.3"
+  }
+}
