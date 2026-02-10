@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1920,1080">
+  <displayList>
+    <graph id="n0_thaz" name="n0" xy="0,0" size="1920,1080" type="rect">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <text id="n1_thaz" name="n1" xy="827,160" size="265,113" fontSize="87" text="匹配中"/>
+    <text id="n2_thaz" name="player1" xy="376,504" size="318,113" fontSize="87" text="Player1">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n3_thaz" name="player2" xy="1214,506" size="318,113" fontSize="87" text="Player2">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n4_thaz" name="n4" xy="824,381" size="272,318" fontSize="200" align="center" vAlign="middle" autoSize="none" text="VS">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n5_thaz" name="cancel" src="cax80" fileName="公共组件/ComBtn.xml" pkg="hwmoj7t9" xy="870,834" size="180,100">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="取消" titleFontSize="54"/>
+    </component>
+  </displayList>
+</component>

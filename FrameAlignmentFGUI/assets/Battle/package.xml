@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="0fi67j7j">
+  <resources>
+    <component id="8z1o0" name="BattleInitPanel.xml" path="/" exported="true"/>
+    <component id="u4on1" name="BattlePanel.xml" path="/" exported="true"/>
+    <component id="u4on2" name="PlayerHpBar.xml" path="/"/>
+    <component id="hiwh3" name="HarmValue.xml" path="/" exported="true"/>
+  </resources>
+  <publish name="" genCode="true"/>
+</packageDescription>

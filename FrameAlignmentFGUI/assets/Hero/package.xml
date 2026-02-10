@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="5vfukh8q">
+  <resources>
+    <component id="thaz0" name="HeroPanel.xml" path="/" exported="true"/>
+    <component id="thaz1" name="HeroItem.xml" path="/"/>
+  </resources>
+  <publish name="" genCode="true"/>
+</packageDescription>

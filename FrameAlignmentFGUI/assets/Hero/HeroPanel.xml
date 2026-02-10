@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1920,1080">
+  <controller name="state" pages="0,,1," selected="0">
+    <remark page="0" value="当前使用"/>
+    <remark page="1" value="使用"/>
+  </controller>
+  <displayList>
+    <graph id="n1_thaz" name="n1" xy="0,0" size="1920,1080" type="rect">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <component id="n0_thaz" name="close" src="cax80" fileName="公共组件/ComBtn.xml" pkg="hwmoj7t9" xy="0,0" size="192,100">
+      <Button title="返回" titleFontSize="52"/>
+    </component>
+    <list id="n7_thaz" name="heroList" xy="204,164" size="1007,767" layout="flow_hz" overflow="scroll" lineGap="21" colGap="12" defaultItem="ui://5vfukh8qthaz1">
+      <relation target="" sidePair="middle-middle"/>
+      <item/>
+      <item/>
+    </list>
+    <graph id="n8_thaz" name="heroRoot" xy="1393,219" size="439,661">
+      <relation target="" sidePair="middle-middle"/>
+    </graph>
+    <component id="n9_thaz" name="useBtn" src="cax80" fileName="公共组件/ComBtn.xml" pkg="hwmoj7t9" xy="1463,929" size="272,100">
+      <gearText controller="state" pages="0" values="使用中" default="使用"/>
+      <Button title="使用中" titleFontSize="57"/>
+    </component>
+  </displayList>
+</component>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1920,1080">
+  <displayList>
+    <graph id="n0_cax8" name="n0" xy="0,0" size="1920,1080" type="rect">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <text id="n1_cax8" name="n1" xy="692,292" size="536,254" fontSize="200" text="Login">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n5_blfn" name="account" src="puiz2" fileName="Com_Input.xml" xy="656,611">
+      <relation target="" sidePair="center-center,bottom-bottom"/>
+      <Label title="账号"/>
+    </component>
+    <component id="n3_cax8" name="possword" src="puiz2" fileName="Com_Input.xml" xy="656,759" size="608,98">
+      <relation target="" sidePair="center-center,bottom-bottom"/>
+      <Label title="密码"/>
+    </component>
+    <component id="n4_cax8" name="loginBtn" src="cax80" fileName="公共组件/ComBtn.xml" pkg="hwmoj7t9" xy="763,926" size="148,70">
+      <relation target="" sidePair="center-center,bottom-bottom"/>
+      <Button title="登录" titleColor="#000000"/>
+    </component>
+    <component id="n7_puiz" name="registerBtn" src="cax80" fileName="公共组件/ComBtn.xml" pkg="hwmoj7t9" xy="1039,926" size="148,70">
+      <relation target="" sidePair="center-center,bottom-bottom"/>
+      <Button title="注册" titleColor="#000000"/>
+    </component>
+  </displayList>
+</component>

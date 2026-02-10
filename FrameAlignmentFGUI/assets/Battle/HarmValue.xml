@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="0,0">
+  <displayList>
+    <text id="n4_hiwh" name="value" xy="-44,-21" pivot="0.5,0.5" size="89,42" fontSize="30" color="#ff0000" align="center" vAlign="middle" text="99999">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+  </displayList>
+  <transition name="t0">
+    <item time="0" type="Scale" target="n4_hiwh" tween="true" startValue="0,0" endValue="1.5,1.5" duration="3" ease="Linear"/>
+    <item time="3" type="Scale" target="n4_hiwh" tween="true" startValue="1.5,1.5" endValue="1,1" duration="3" ease="Linear"/>
+    <item time="9" type="Alpha" target="n4_hiwh" tween="true" startValue="1" endValue="0" duration="6" ease="Linear"/>
+  </transition>
+</component>

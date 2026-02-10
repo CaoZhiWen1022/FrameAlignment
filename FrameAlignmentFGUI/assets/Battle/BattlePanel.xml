@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1920,1080" opaque="false">
+  <displayList>
+    <component id="n0_u4on" name="thisHpBar" src="u4on2" fileName="PlayerHpBar.xml" xy="278,210" touchable="false">
+      <ProgressBar value="100" max="100"/>
+    </component>
+    <component id="n2_u4on" name="enemyHpBar" src="u4on2" fileName="PlayerHpBar.xml" xy="45,106" touchable="false" controller="c_state,1">
+      <ProgressBar value="97" max="100"/>
+    </component>
+    <component id="n3_hiwh" name="harmValueLayer" src="hiwh4" fileName="NULL.xml" pkg="hwmoj7t9" xy="0,0" touchable="false"/>
+  </displayList>
+  <transition name="t0"/>
+</component>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="hletxy2k">
+  <resources>
+    <component id="q7gw0" name="LoadPanel.xml" path="/" exported="true"/>
+    <component id="wnn81" name="bar.xml" path="/"/>
+  </resources>
+  <publish name="" genCode="true"/>
+</packageDescription>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="hmul0fbz">
+  <resources>
+    <component id="cax80" name="HomePanel.xml" path="/" exported="true"/>
+    <component id="thaz1" name="HeroItem.xml" path="/"/>
+    <component id="thaz2" name="MatchPanel.xml" path="/" exported="true"/>
+  </resources>
+  <publish name="" genCode="true"/>
+</packageDescription>

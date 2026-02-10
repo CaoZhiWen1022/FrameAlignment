@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1075,815">
+  <displayList>
+    <graph id="n0_puiz" name="n0" xy="0,0" size="1075,815" type="rect"/>
+    <text id="n1_puiz" name="n1" xy="483,47" size="108,69" fontSize="52" text="注册"/>
+    <component id="n3_puiz" name="account" src="puiz2" fileName="Com_Input.xml" xy="233,202">
+      <Label title="账号"/>
+    </component>
+    <component id="n4_puiz" name="password" src="puiz2" fileName="Com_Input.xml" xy="233,335">
+      <Label title="密码"/>
+    </component>
+    <component id="n5_puiz" name="username" src="puiz2" fileName="Com_Input.xml" xy="233,464">
+      <Label title="用户名"/>
+    </component>
+    <component id="n6_puiz" name="register" src="cax80" fileName="公共组件/ComBtn.xml" pkg="hwmoj7t9" xy="458,646" size="158,70">
+      <Button title="注册"/>
+    </component>
+  </displayList>
+</component>

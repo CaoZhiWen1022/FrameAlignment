@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="608,98" extention="Label">
+  <displayList>
+    <text id="n6_puiz" name="title" xy="2,27" size="100,44" fontSize="32" text="输入框"/>
+    <graph id="n5_blfn" name="n5" xy="127,0" size="481,98" type="rect" fillColor="#ff00ff00">
+      <relation target="n2_cax8" sidePair="width-width,left-left"/>
+    </graph>
+    <text id="n2_cax8" name="input" xy="127,0" size="481,98" fontSize="30" vAlign="middle" autoSize="none" text="" input="true" prompt="Input">
+      <relation target="n6_puiz" sidePair="leftext-right"/>
+    </text>
+  </displayList>
+</component>

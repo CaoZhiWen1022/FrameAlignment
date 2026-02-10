@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="363,524" extention="Button">
+  <controller name="button" pages="2,up,3,down" selected="0"/>
+  <displayList>
+    <graph id="n3_thaz" name="n3" xy="0,0" size="363,524" type="rect" fillColor="#ff666666"/>
+    <graph id="n4_thaz" name="root" xy="0,0" size="363,402"/>
+    <graph id="n5_thaz" name="n5" xy="12,412" size="333,100" type="rect"/>
+    <text id="n6_thaz" name="name" xy="12,412" size="333,100" fontSize="57" align="center" vAlign="middle" autoSize="none" text="小法"/>
+    <graph id="n7_thaz" name="n7" xy="0,0" size="363,524" type="rect" lineSize="11" lineColor="#ff00ff00" fillColor="#00ffffff">
+      <gearDisplay controller="button" pages="3"/>
+    </graph>
+  </displayList>
+  <Button mode="Radio"/>
+</component>

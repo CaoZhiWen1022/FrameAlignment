@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1920,1080">
+  <displayList>
+    <graph id="n0_wnn8" name="n0" xy="0,0" size="1920,1080" type="rect">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <text id="n1_wnn8" name="n1" xy="571,298" size="777,254" fontSize="200" text="Loading">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n2_wnn8" name="bar" src="wnn81" fileName="bar.xml" xy="253,830">
+      <relation target="" sidePair="center-center,bottom-bottom"/>
+      <ProgressBar max="100"/>
+    </component>
+  </displayList>
+</component>

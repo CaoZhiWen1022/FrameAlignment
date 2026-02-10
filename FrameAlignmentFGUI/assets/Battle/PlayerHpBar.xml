@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="150,18" extention="ProgressBar">
+  <controller name="c_state" exported="true" pages="0,,1," selected="0">
+    <remark page="0" value="this"/>
+    <remark page="1" value="enemy"/>
+  </controller>
+  <displayList>
+    <graph id="n0_u4on" name="n0" xy="0,0" size="150,18" type="rect" fillColor="#ff333333"/>
+    <graph id="n1_u4on" name="bar" xy="2,2" size="146,14" type="rect" lineSize="0" fillColor="#ff00ff00">
+      <gearColor controller="c_state" pages="1" values="#ff0000" default="#00ff00"/>
+    </graph>
+  </displayList>
+  <ProgressBar/>
+</component>

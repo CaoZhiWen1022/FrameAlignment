@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1920,1080">
+  <displayList>
+    <graph id="n0_blfn" name="n0" xy="0,0" size="1920,1080" type="rect">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <text id="n1_blfn" name="title" xy="329,413" size="1262,254" fontSize="200" text="GameLaunch">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+  </displayList>
+  <transition name="t0">
+    <item time="0" type="Alpha" target="n1_blfn" tween="true" startValue="1" endValue="0" duration="24" ease="Linear"/>
+  </transition>
+</component>

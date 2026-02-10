@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="hwmoj7t9">
+  <resources>
+    <component id="cax80" name="ComBtn.xml" path="/公共组件/" exported="true"/>
+    <component id="blfn2" name="PopupMask.xml" path="/" exported="true"/>
+    <component id="puiz3" name="TipPanel.xml" path="/"/>
+    <component id="hiwh4" name="NULL.xml" path="/" exported="true"/>
+  </resources>
+  <publish name="" genCode="true"/>
+</packageDescription>

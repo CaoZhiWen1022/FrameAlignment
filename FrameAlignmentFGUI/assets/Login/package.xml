@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="hhu0yjwq">
+  <resources>
+    <component id="wnn80" name="LoginPanel.xml" path="/" exported="true"/>
+    <component id="puiz1" name="RegisterPopup.xml" path="/" exported="true"/>
+    <component id="puiz2" name="Com_Input.xml" path="/"/>
+  </resources>
+  <publish name="" genCode="true"/>
+</packageDescription>

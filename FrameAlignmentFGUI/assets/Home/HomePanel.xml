@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1920,1080">
+  <displayList>
+    <graph id="n2_ylyw" name="n2" xy="0,0" size="1920,1080" type="rect">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <text id="n1_cax8" name="title" xy="906,92" size="107,49" fontSize="36" color="#ff0000" text="Home">
+      <relation target="" sidePair="center-center"/>
+    </text>
+    <component id="n3_thaz" name="heroRoot" src="thaz1" fileName="HeroItem.xml" xy="526,240"/>
+    <component id="n4_thaz" name="battle" src="cax80" fileName="公共组件/ComBtn.xml" pkg="hwmoj7t9" xy="1613,920" size="228,100">
+      <Button title="战斗" titleFontSize="60"/>
+    </component>
+  </displayList>
+</component>
