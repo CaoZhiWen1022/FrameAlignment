@@ -1,0 +1,135 @@
+syntax = "proto3";
+
+package proto;
+
+option go_package = "./proto";
+
+import "common.proto";
+
+// ==================== 匹配相关 ====================
+
+// 匹配请求
+message MatchRequest {
+  BaseRequest base = 1;      // 基础请求对象
+}
+
+// 匹配响应
+message MatchResponse {
+  BaseResponse base = 1;      // 基础响应对象
+}
+
+// 匹配成功响应
+message MatchSuccessResponse {
+  BaseResponse base = 1;      // 基础响应对象
+  string room_id = 2;         // 房间ID
+  repeated PlayerInfo players = 3;  // 玩家列表
+}
+
+// 取消匹配请求
+message CancelMatchRequest {
+  BaseRequest base = 1;      // 基础请求对象
+}
+
+// 取消匹配响应
+message CancelMatchResponse {
+  BaseResponse base = 1;      // 基础响应对象
+}
+
+// ==================== 战斗准备相关 ====================
+
+// 战斗准备请求
+message BattleReadyRequest {
+  BaseRequest base = 1;      // 基础请求对象
+}
+
+// 战斗准备响应
+message BattleReadyResponse {
+  BaseResponse base = 1;     // 基础响应对象
+}
+
+// ==================== 战斗开始相关 ====================
+
+// 战斗开始倒计时响应
+message BattleCountdownResponse {
+  BaseResponse base = 1;     // 基础响应对象
+  int32 countdown = 2;       // 倒计时秒数
+}
+
+// 战斗开始响应
+message BattleStartResponse {
+  BaseResponse base = 1;     // 基础响应对象
+  int64 battle_id = 2;       // 战斗ID
+  int32 frame_rate = 3;      // 帧率（每秒帧数）
+  int64 start_time = 4;      // 战斗开始时间（Unix时间戳）
+}
+
+// ==================== 帧同步相关 ====================
+
+// 帧同步请求
+message FrameSyncRequest {
+  BaseRequest base = 1;      // 基础请求对象
+  int64 frame_index = 2;     // 当前帧索引
+  OpData op_data = 3;  // 操作数据列表
+}
+
+// 战斗帧数据下发响应
+message FrameDataResponse {
+  BaseResponse base = 1;     // 基础响应对象
+  FrameData frame_data = 2;  // 帧数据
+}
+
+// ==================== 数据定义 ====================
+
+// 玩家信息
+message PlayerInfo {
+  int64 user_id = 1;         // 用户ID
+  string nickname = 2;       // 昵称
+  int32 hero_id = 3;         // 英雄ID
+  int32 camp = 4;
+}
+
+// 战斗帧数据
+message FrameData {
+  int64 frame_index = 1;     // 帧索引
+  int64 timestamp = 2;       // 时间戳
+  repeated OpData op_data_list = 3;  // 操作数据列表
+}
+
+// 操作类型枚举
+enum OpType {
+  OP_UNKNOWN = 0;
+  OP_MOVE = 1;               // 移动操作
+  OP_SKILL = 2;              // 技能操作
+  OP_ATTACK = 3;             // 攻击操作
+}
+
+// 操作数据
+message OpData {
+  int64 user_id = 1;         // 用户ID
+  OpType op_type = 2;        // 操作类型
+  oneof op_data {
+    OpMoveData move_data = 3;    // 移动数据
+    OpSkillData skill_data = 4;   // 技能数据
+    OpAttackData attack_data = 5; // 攻击数据
+  }
+}
+
+// 移动操作数据
+message OpMoveData {
+  int64 x = 1;               // X坐标
+  int64 y = 2;               // Y坐标
+  int64 z = 3;               // Z坐标
+}
+
+// 技能操作数据
+message OpSkillData {
+  int32 skill_id = 1;        // 技能ID
+  int64 target_x = 2;        // 目标X坐标
+  int64 target_y = 3;        // 目标Y坐标
+  int64 target_z = 4;        // 目标Z坐标
+}
+
+// 攻击操作数据
+message OpAttackData {
+  int64 target_user_id = 1;  // 目标用户ID
+}

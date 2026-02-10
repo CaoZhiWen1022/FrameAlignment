@@ -1,0 +1,63 @@
+syntax = "proto3";
+
+package proto;
+
+option go_package = "./proto";
+
+import "common.proto";
+
+// ==================== 注册相关 ====================
+
+// 注册请求
+message RegisterRequest {
+  BaseRequest base = 1;     // 基础请求对象
+  string account = 2;      // 账号
+  string password = 3;       // 密码
+  string nickname = 4;       // 玩家昵称
+}
+
+// 注册响应
+message RegisterResponse {
+  BaseResponse base = 1;     // 基础响应对象
+  UserInfo user_info = 2;    // 用户信息（注册成功时返回）
+  string token = 3;          // 认证Token（注册成功时返回）
+}
+
+// ==================== 登录相关 ====================
+
+// 登录请求
+message LoginRequest {
+  BaseRequest base = 1;      // 基础请求对象
+  string account = 2;       // 账号
+  string password = 3;       // 密码
+}
+
+// 登录响应
+message LoginResponse {
+  BaseResponse base = 1;     // 基础响应对象
+  UserInfo user_info = 2;    // 用户信息（登录成功时返回）
+}
+
+// ==================== 登出相关 ====================
+
+// 登出请求
+message LogoutRequest {
+  BaseRequest base = 1;      // 基础请求对象
+}
+
+// 登出响应
+message LogoutResponse {
+  BaseResponse base = 1;     // 基础响应对象
+}
+
+
+// ==================== 用户信息 ====================
+
+// 用户信息
+message UserInfo {
+  int64 user_id = 1;         // 用户ID
+  string nickname = 2;       // 昵称
+  int64 create_time = 3;     // 创建时间（Unix时间戳）
+  int64 last_login_time = 4; // 最后登录时间（Unix时间戳）
+}
+

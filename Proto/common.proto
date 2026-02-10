@@ -1,0 +1,97 @@
+syntax = "proto3";
+
+package proto;
+
+option go_package = "./proto";
+
+// 状态码枚举
+enum StatusCode {
+  STATUS_UNKNOWN = 0;           // 未知状态
+  STATUS_SUCCESS = 200;         // 成功
+  STATUS_BAD_REQUEST = 400;     // 请求错误
+  STATUS_UNAUTHORIZED = 401;     // 未授权
+  STATUS_FORBIDDEN = 403;       // 禁止访问
+  STATUS_NOT_FOUND = 404;       // 未找到
+  STATUS_INTERNAL_ERROR = 500;  // 服务器内部错误
+  
+  // 业务状态码 (1000+)
+  STATUS_INVALID_PARAMS = 1001;      // 参数无效
+  STATUS_USER_NOT_EXIST = 1002;      // 用户不存在
+  STATUS_USER_ALREADY_EXIST = 1003;  // 用户已存在
+  STATUS_PASSWORD_ERROR = 1004;      // 密码错误
+  STATUS_TOKEN_INVALID = 1005;       // Token无效
+  STATUS_TOKEN_EXPIRED = 1006;       // Token过期
+}
+
+// 接口ID枚举
+enum ApiId {
+  API_UNKNOWN = 0;
+  
+  // 认证相关接口 (1000+)
+  // 注册相关
+  API_REGISTER_REQ = 1001;    // 注册请求
+  API_REGISTER_RESP = 1002;   // 注册响应
+  
+  // 登录相关
+  API_LOGIN_REQ = 1003;       // 登录请求
+  API_LOGIN_RESP = 1004;      // 登录响应
+  
+  // 登出相关
+  API_LOGOUT_REQ = 1005;      // 登出请求
+  API_LOGOUT_RESP = 1006;     // 登出响应
+  
+  // 英雄相关接口 (2000+)
+  // 获取英雄信息
+  API_GET_HERO_INFO_REQ = 2001;    // 获取英雄信息请求
+  API_GET_HERO_INFO_RESP = 2002;   // 获取英雄信息响应
+  
+  // 设置使用英雄
+  API_SET_USE_HERO_REQ = 2003;     // 设置使用英雄请求
+  API_SET_USE_HERO_RESP = 2004;    // 设置使用英雄响应
+  
+  // 战斗相关接口 (3000+)
+  // 匹配相关
+  API_MATCH_REQ = 3001;            // 匹配请求
+  API_MATCH_RESP = 3002;           // 匹配响应
+  API_MATCH_SUCCESS_RESP = 3003;   // 匹配成功响应
+  
+  // 战斗准备
+  API_BATTLE_READY_REQ = 3004;     // 战斗准备请求
+  API_BATTLE_READY_RESP = 3005;    // 战斗准备响应
+  
+  // 战斗开始
+  API_BATTLE_COUNTDOWN_RESP = 3006; // 战斗开始倒计时响应
+  API_BATTLE_START_RESP = 3007;     // 战斗开始响应
+  
+  // 帧同步
+  API_FRAME_SYNC_REQ = 3008;        // 帧同步请求
+  API_FRAME_SYNC_RESP = 3009;       // 帧同步响应
+  
+  // 取消匹配
+  API_CANCEL_MATCH_REQ = 3010;     // 取消匹配请求
+  API_CANCEL_MATCH_RESP = 3011;    // 取消匹配响应
+  
+  // 战斗帧数据
+  API_FRAME_DATA_RESP = 3012;      // 战斗帧数据下发响应
+}
+
+// 基础请求对象 - 所有请求都应该基于此对象
+message BaseRequest {
+  ApiId id = 1;           // 接口ID，标识是哪个接口
+}
+
+// 基础响应对象 - 所有响应都应该基于此对象
+message BaseResponse {
+  StatusCode code = 1;    // 本次请求的状态码
+  ApiId id = 2;           // 接口ID
+  string message = 3;     // 响应消息（可选）
+}
+
+message CommonRequest{
+  BaseRequest base = 1;
+}
+
+message CommonResponse{
+  BaseResponse base = 1; 
+}
+

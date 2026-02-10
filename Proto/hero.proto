@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+package proto;
+
+option go_package = "./proto";
+
+import "common.proto";
+
+// ==================== 获取英雄信息相关 ====================
+
+// 获取英雄信息请求
+message GetHeroInfoRequest {
+  BaseRequest base = 1;      // 基础请求对象
+}
+
+// 获取英雄信息响应
+message GetHeroInfoResponse {
+  BaseResponse base = 1;      // 基础响应对象
+  HeroInfo heroInfo = 2;     // 当前使用的英雄ID
+}
+
+// ==================== 设置使用英雄相关 ====================
+
+// 设置使用英雄请求
+message SetUseHeroRequest {
+  BaseRequest base = 1;      // 基础请求对象
+  int32 hero_id = 2;         // 英雄ID
+}
+
+// 设置使用英雄响应
+message SetUseHeroResponse {
+  BaseResponse base = 1;      // 基础响应对象
+  HeroInfo heroInfo = 2;     // 当前使用的英雄ID
+}
+
+message HeroInfo{
+    int32 use_hero_id = 1;
+}
